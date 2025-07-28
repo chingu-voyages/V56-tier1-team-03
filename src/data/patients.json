@@ -1,0 +1,82 @@
+[
+  {
+    "id": "A1B2C3",
+    "name": "John Smith",
+    "procedure": "Appendectomy",
+    "currentStatus": "In-progress",
+    "lastUpdated": "2025-07-28T14:30:00Z",
+    "history": []
+  },
+  {
+    "id": "D4E5F6",
+    "name": "Alice Johnson",
+    "procedure": "Knee Replacement",
+    "currentStatus": "Pre-Procedure",
+    "lastUpdated": "2025-07-28T13:45:00Z",
+    "history": []
+  },
+  {
+    "id": "G7H8I9",
+    "name": "Michael Brown",
+    "procedure": "Heart Bypass",
+    "currentStatus": "Recovery",
+    "lastUpdated": "2025-07-28T11:00:00Z",
+    "history": []
+  },
+  {
+    "id": "J1K2L3",
+    "name": "Samantha Lee",
+    "procedure": "Gallbladder Removal",
+    "currentStatus": "Recovery completed",
+    "lastUpdated": "2025-07-28T10:30:00Z",
+    "history": []
+  },
+  {
+    "id": "M4N5O6",
+    "name": "David Miller",
+    "procedure": "Tonsillectomy",
+    "currentStatus": "Checked In",
+    "lastUpdated": "2025-07-28T15:00:00Z",
+    "history": []
+  },
+  {
+    "id": "P7Q8R9",
+    "name": "Emma Davis",
+    "procedure": "Cesarean Section",
+    "currentStatus": "Pre-Procedure",
+    "lastUpdated": "2025-07-28T14:00:00Z",
+    "history": []
+  },
+  {
+    "id": "S1T2U3",
+    "name": "Chris Wilson",
+    "procedure": "Cataract Surgery",
+    "currentStatus": "Closing",
+    "lastUpdated": "2025-07-28T13:20:00Z",
+    "history": []
+  },
+  {
+    "id": "V4W5X6",
+    "name": "Isabella Garcia",
+    "procedure": "Hip Replacement",
+    "currentStatus": "Complete",
+    "lastUpdated": "2025-07-28T14:50:00Z",
+    "history": []
+  },
+  {
+    "id": "Y7Z8A1",
+    "name": "James Martinez",
+    "procedure": "Brain MRI",
+    "currentStatus": "Dismissal",
+    "lastUpdated": "2025-07-28T13:00:00Z",
+    "history": []
+  },
+  {
+    "id": "B2C3D4",
+    "name": "Olivia Thomas",
+    "procedure": "Colonoscopy",
+    "currentStatus": "Checked In",
+    "lastUpdated": "2025-07-28T15:10:00Z",
+    "history": []
+  }
+]
