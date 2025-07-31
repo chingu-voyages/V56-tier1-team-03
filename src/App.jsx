@@ -8,6 +8,7 @@ import GuestStatusPage from './Pages/GuestStatusPage';
 import StaffDashboardPage from './Pages/StaffDashboardPage';
 import SearchPatientPage from './Pages/SearchPatientPage'; //Created a Page and a route
 import AddPatientPage from './Pages/admin/AddPatientPage';
+import Footer from './components/Layout/Footer';
 
 
 function App() {

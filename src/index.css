@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./global.css";
 
 /* Reset some default styles that might conflict with Tailwind */
 * {
