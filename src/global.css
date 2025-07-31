@@ -1,0 +1,65 @@
+:root {
+    /* Font Family */
+    --font-family-base: 'Inter', 'Segoe UI', sans-serif;
+
+    /* Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+
+    /* Line Height */
+    --line-height-base: 1.6;
+
+    /* Base Colors */
+    --color-primary: #2A7FBA;
+    --color-secondary: #3A9BDF;
+    --color-accent: #5BC0BE;
+    --color-background: #F8FBFD;
+    --color-surface: #FFFFFF;
+    --color-text: #1F2D3D;
+    --color-muted: #7A8A99;
+    --color-danger: #D9534F;
+    --color-success: #5CB85C;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #2A7FBA 0%, #3A9BDF 100%);
+
+    /* Spacing Scale */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Patient Status Colors */
+    --status-checked-in: #B0C4DE;
+    /* Light Steel Blue */
+    --status-pre-procedure: #FFD580;
+    /* Light Amber */
+    --status-in-progress: #5BC0BE;
+    /* Teal Blue */
+    --status-closing: #FFA07A;
+    /* Light Salmon */
+    --status-recovery: #98FB98;
+    /* Pale Green */
+    --status-complete: green;
+    /* Light Green */
+    --status-dismissal: #D3D3D3;
+    /* Light Grey */
+}
+
+/* Base Typography */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -6,6 +6,7 @@ import PublicDashboardPage from './Pages/PublicDashboardPage';
 import GuestStatusPage from './Pages/GuestStatusPage';
 import StaffDashboardPage from './Pages/StaffDashboardPage';
 import AddPatientPage from './Pages/admin/AddPatientPage';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/admin/add-patient" element={<AddPatientPage />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
