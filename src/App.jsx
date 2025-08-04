@@ -8,6 +8,7 @@ import StaffDashboardPage from './Pages/StaffDashboardPage';
 import SearchPatientPage from './Pages/SearchPatientPage'; //Created a Page and a route
 import AddPatientPage from './Pages/admin/AddPatientPage';
 import Footer from './components/Layout/Footer'
+import ErrorPage from './Pages/ErrorPage'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/dashboard" element={<StaffDashboardPage />} />
           <Route path="/search-patient" element={<SearchPatientPage />} />
           <Route path="/admin/add-patient" element={<AddPatientPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
       <Footer /> 
