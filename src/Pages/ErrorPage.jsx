@@ -3,12 +3,12 @@ import animationData from '../data/for_error.json'
 
 export default function ErrorPage() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen overflow-hidden bg-red-50 text-black text-center p-6">
+    <div className="flex h-full w-full items-center justify-center  ">
       <Player
         autoplay
         loop
         src={animationData}
-        style={{ height: '600px', width: '600px' }}
+        style={{ height: '780px', width: '600px' }}
       />
     </div>
   )
