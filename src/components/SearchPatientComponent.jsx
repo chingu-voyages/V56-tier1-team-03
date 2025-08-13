@@ -20,7 +20,8 @@ const SearchPatientComponent = () => {
 
     if (foundPatient) {
       setError(null);
-      navigate('/status/:patientId', { state: { patient: foundPatient } });
+      // navigate('/status/:patientId', { state: { patient: foundPatient } });
+      navigate(`/status/${patientId}`, { state: { patient: foundPatient } });
     } else {
       setError('Patient not found. Please check your ID and try again.');
     }
