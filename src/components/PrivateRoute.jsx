@@ -9,7 +9,15 @@ function PrivateRoute({ children, allowedRoles }) {
   }
 
   if (allowedRoles && !allowedRoles.includes(user.role)) {
-    return <Navigate to="/dashboard" replace />;
+    // Don't redirect surgical users back to admin dashboard!
+    // Redirect them to their proper dashboard instead
+    if (user.role === 'surgical') {
+      return <Navigate to="/surgicalDashboard" replace />;
+    } else if (user.role === 'admin') {
+      return <Navigate to="/dashboard" replace />;
+    }
+    // Fallback to login for unknown roles
+    return <Navigate to="/" replace />;
   }
 
   return children;

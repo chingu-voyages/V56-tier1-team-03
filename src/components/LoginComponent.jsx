@@ -1,22 +1,29 @@
 import { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
-import { Link, useNavigate } from "react-router-dom"; // ⬅️ added useNavigate
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
     const { login, error, user } = useContext(AuthContext);
     const [identityNumber, setidentityNumber] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // ⬅️ init
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
       e.preventDefault();
       login(identityNumber, password);
     };
 
+    // Role-based redirect after successful login
     useEffect(() => {
       if (user) {
-        navigate('/dashboard'); // ⬅️ redirect after login
+        if (user.role === 'admin') {
+          navigate('/dashboard');
+        } else if (user.role === 'surgical') {
+          navigate('/surgicalDashboard'); // Updated to match your file name
+        } else {
+          navigate('/'); // fallback for unknown roles
+        }
       }
     }, [user, navigate]);
 
@@ -68,7 +75,7 @@ const LoginComponent = () => {
           <div className="w-full max-w-md text-center z-10 space-y-16">
             <h3 className="text-4xl font-semibold ">Family & Friends</h3>
             <p className="text-lg font-bold text-gray-100">Search for a patient?</p>
-            <Link to="/search-patient"> {/* Just added a route to the SearchPatientPage */}
+            <Link to="/search-patient">
               <button className="border-2 font-bold text-lg w-90 py-6 border-white rounded-md hover:bg-white hover:text-blue-600 transition">
                 View Patient
               </button>
