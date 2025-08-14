@@ -20,7 +20,9 @@ const StaffDashboardComponent = () => {
     <div className="min-h-screen bg-blue-50 px-4 py-10 relative">
       {/* Page Header */}
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">Staff Dashboard</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          Staff Dashboard
+        </h1>
         <p className="text-lg text-gray-600 mb-6">
           Interactive patient management for hospital staff
         </p>
@@ -78,7 +80,11 @@ const StaffDashboardComponent = () => {
                       </Link>
                     )}
                     <Link
-                      to={`/update-status?id=${patient.id}`}
+                      to={
+                        isSurgical
+                          ? `/surgical-update?id=${patient.id}`
+                          : `/update-status?id=${patient.id}`
+                      }
                       className="text-green-600 hover:underline font-medium"
                     >
                       Update Status
@@ -93,15 +99,15 @@ const StaffDashboardComponent = () => {
 
       {/* Floating Add Patient Button - hide if surgical */}
       {!isSurgical && (
-         <div className="max-w-6xl mx-auto mt-6 flex justify-end">
-      <Link
-        to="/admin/add-patient"
-        className="bg-blue-500 text-white px-6 py-4 rounded-full shadow-lg flex items-center space-x-2 hover:bg-blue-900 transition"
-      >
-        <span className="text-2xl">+</span>
-        <span className="font-semibold text-sm">Add patient</span>
-      </Link>
-    </div>
+        <div className="max-w-6xl mx-auto mt-6 flex justify-end">
+          <Link
+            to="/admin/add-patient"
+            className="bg-blue-500 text-white px-6 py-4 rounded-full shadow-lg flex items-center space-x-2 hover:bg-blue-900 transition"
+          >
+            <span className="text-2xl">+</span>
+            <span className="font-semibold text-sm">Add patient</span>
+          </Link>
+        </div>
       )}
     </div>
   );

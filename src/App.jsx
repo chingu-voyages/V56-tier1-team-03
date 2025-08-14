@@ -15,6 +15,8 @@ import ChatbotIcon from "./components/UI/ChatbotIcon";
 import { ChatbotProvider } from "./contexts/ChatbotContext";
 import PrivateRoute from "./components/PrivateRoute";
 import SurgicalDashboard from "./Pages/surgicalDashboard";
+import SurgicalUpdatePage from "./Pages/surgicalUpdatePage";
+
 
 function App() {
   return (
@@ -44,6 +46,14 @@ function App() {
                 <PrivateRoute allowedRoles={["surgical"]}><SurgicalDashboard /></PrivateRoute>
               } 
               />
+              <Route
+              path="/surgical-update"
+              element={
+                <PrivateRoute allowedRoles={["surgical"]}>
+                  <SurgicalUpdatePage />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="/update-status"
               element={

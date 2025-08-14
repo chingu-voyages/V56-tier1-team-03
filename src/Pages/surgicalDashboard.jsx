@@ -73,7 +73,7 @@ const StaffDashboardComponent = () => {
 
                     {/* "Update Status" allowed for all */}
                     <Link
-                      to={`/update-status?id=${patient.id}`}
+                      to={`/surgical-update?id=${patient.id}`}
                       className="text-green-600 hover:underline font-medium"
                     >
                       Update Status
