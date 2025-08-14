@@ -14,6 +14,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import ChatbotIcon from "./components/UI/ChatbotIcon";
 import { ChatbotProvider } from "./contexts/ChatbotContext";
 import PrivateRoute from "./components/PrivateRoute";
+import MedicalDashboard from "./Pages/medicalStaffDashboard";
 
 function App() {
   return (
@@ -32,15 +33,21 @@ function App() {
             <Route
               path="/dashboard"
               element={
-                <PrivateRoute allowedRoles={["staff", "admin"]}>
+                <PrivateRoute allowedRoles={["admin"]}>
                   <StaffDashboardPage />
                 </PrivateRoute>
               }
             />
             <Route
+              path="/medicalStaffDashboard"
+              element={
+                <PrivateRoute allowedRoles={["staff"]}><MedicalDashboard /></PrivateRoute>
+              } 
+              />
+            <Route
               path="/update-status"
               element={
-                <PrivateRoute allowedRoles={["staff", "admin"]}>
+                <PrivateRoute allowedRoles={["admin"]}>
                   <UpdatePatientStatusPage />
                 </PrivateRoute>
               }

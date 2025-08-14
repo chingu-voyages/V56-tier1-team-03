@@ -9,23 +9,30 @@ const AuthProvider = ({ children }) => {
 
   const login = (identityNumber, password) => {
     setError(null);
+
     const foundUser = users.find(
       (u) =>
         u.identityNumber === identityNumber && u.password === password
     );
 
     if (foundUser) {
-      setUser({
+      const userData = {
         identityNumber: foundUser.identityNumber,
         name: foundUser.name,
         email: foundUser.email,
         role: foundUser.role,
-      });
+      };
+
+      setUser(userData);
       setError(null);
-      console.log("Login successful");
+      console.log("Login successful:", userData);
+
+      // Return the logged-in user so caller can redirect based on role
+      return userData;
     } else {
       setUser(null);
       setError("Invalid Credentials");
+      return null;
     }
   };
 
@@ -33,6 +40,7 @@ const AuthProvider = ({ children }) => {
     setUser(null);
     setError(null);
     localStorage.removeItem("user");
+    console.log("User logged out");
   };
 
   return (
