@@ -37,7 +37,7 @@ const Footer = () => {
                     className="inline-block w-8 h-8 mx-1 align-middle" 
                   /> 
                   by{' '}
-                  <span className="text-lg text-[var(--color-primary)]">JAMBA Team</span>
+                  <span className="text-teal-500 text-xl">JAMBA Team</span>
                 </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
                     className="inline-block w-8 h-8 mx-1 align-middle" 
                   /> 
                   by{' '}
-                  <span className="text-lg text-[var(--color-primary)]">JAMBA Team</span>
+                  <span className="text-teal-500 text-xl ">JAMBA Team</span>
                 </p>
             </div>
 
@@ -79,13 +79,22 @@ const Footer = () => {
                 Team:
               </span>
               <div className="flex items-center space-x-1 text-sm">
-                {['Jimmy','Asif','Mostafa',  'Britt',  'Aibar'].map((member, index) => (
-                  <React.Fragment key={member}>
-                    <span 
-                      className="font-medium text-lg hover:scale-110 transform transition-transform duration-200 cursor-default text-[var(--color-primary)]"
+                {[
+                  { name: 'Jimmy', link: 'https://github.com/JimLimpe' },
+                  { name: 'Asif', link: 'https://github.com/mhdasif123' },
+                  { name: 'Mostafa', link: 'https://github.com/Mostafa-Elmoalem' },
+                  { name: 'Brittany', link: 'https://github.com/Haupt04' },
+                  { name: 'Aibar', link: 'https://github.com/Aibar-S/' },
+                ].map((member, index) => (
+                  <React.Fragment key={member.name}>
+                    <a
+                      href={member.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-lg hover:scale-110 transform transition-transform duration-200 cursor-pointer text-[var(--color-primary)]"
                     >
-                      {member}
-                    </span>
+                      {member.name}
+                    </a>
                     {index < 4 && (
                       <span className="text-[var(--color-muted)]">|</span>
                     )}
