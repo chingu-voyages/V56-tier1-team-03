@@ -12,7 +12,7 @@ SurgiTrack is a comprehensive patient status tracking system designed to reduce 
 
 ## 🎥 Demo
 
-[**SurgiTrack**](https://your-demo-link.com)
+[**SurgiTrack**](https://surgitrack.netlify.app/)
 
 | Staff Dashboard | Staff Login | Patient Status |
 | :---: | :---: | :---: |
